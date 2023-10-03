@@ -1,6 +1,6 @@
-class unregisterDomain {
+class UnregisterDomain {
   final String domainName;
 
-  unregisterDomain({
+  UnregisterDomain({
     required this.domainName});
 }
