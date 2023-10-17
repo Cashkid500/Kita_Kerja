@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:kita_kerja/constants/app_api_endpoints.dart';
 import 'package:kita_kerja/core/network/network_request.dart';
 import 'package:kita_kerja/core/network/network_retry.dart';
 import 'package:kita_kerja/data/source/Transactions/exportTransaction_abstract.dart';
@@ -12,10 +15,41 @@ class ExportTransactionSourceImpl implements ExportTransactionSource {
     required this.networkRetry,
   });
 
+  // @override
+  // Future<ExportTransactionResponse> exportTransaction() {
+  //   // TODO: implement exportTransaction
+  //   throw UnimplementedError();
+  // }
   @override
-  Future<ExportTransactionResponse> exportTransaction() {
-    // TODO: implement exportTransaction
-    throw UnimplementedError();
+  Future<ExportTransactionResponse> exportTransaction() async {
+    String url = AppEndpoints.exportTransaction;
+    final response = await networkRetry.networkRetry(
+      () => networkRequest.get(
+        url,
+      ),
+    );
+    final data = await json.decode(response.body);
+    if (response.statusCode == 200) {
+      try {
+        final ExportTransactionResponse responseModel =
+            ExportTransactionResponse.fromJson(data);
+        return responseModel;
+      } on Exception catch (_) {
+        rethrow;
+      }
+    } else {
+      final ExportTransactionResponse responseModel =
+          ExportTransactionResponse.fromJson(data);
+      try {
+        if (responseModel.status == false) {
+          throw Exception(data['message']);
+        } else {
+          final errorMessage = data['message'];
+          throw Exception("API failed");
+        }
+      } on Exception catch (_) {
+        rethrow;
+      }
+    }
   }
-  
 }
