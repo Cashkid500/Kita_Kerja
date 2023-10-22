@@ -20,7 +20,8 @@ class _LoginScreenState extends State<LoginScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 20,),
+            height: 20,
+          ),
           Image.asset("assets/images/Login.png"),
           SizedBox(height: 20), // Add some space between the image and the text
           Padding(
@@ -133,8 +134,8 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: EdgeInsets.only(left: 25),
             child: InkWell(
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) => RegistrationScreen()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => RegistrationScreen()));
               },
               child: Container(
                 width: 297,

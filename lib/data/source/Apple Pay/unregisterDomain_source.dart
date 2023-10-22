@@ -45,7 +45,8 @@ class UnregisterDomainSourceImpl implements UnregisterDomainSource {
         rethrow;
       }
     } else {
-      final UnregisterDomainResponse responseModel = UnregisterDomainResponse.fromJson(data);
+      final UnregisterDomainResponse responseModel =
+          UnregisterDomainResponse.fromJson(data);
       try {
         if (responseModel.status == false) {
           throw Exception(data['message']);
