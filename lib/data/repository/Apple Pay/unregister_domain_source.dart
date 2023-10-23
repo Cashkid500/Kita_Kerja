@@ -15,7 +15,7 @@ class UnregisterDomainRepoImpl implements UnregisterDomainRepo {
   final UnregisterDomainSource unregister;
 
   UnregisterDomainRepoImpl({required Ref ref})
-      : unregister = ref.read(unregisterDomainSourceProvider),
+      : unregister = ref.read(unregisterSourceProvider),
         domain = ref.read(networkInfoProvider);
 
   @override
@@ -26,7 +26,7 @@ class UnregisterDomainRepoImpl implements UnregisterDomainRepo {
 
     return sR.tryRemoteandCatch(
       call: unregister.unregisterDomain(payload: payload),
-      errorTitle: "Error Registering Domain,"
+      errorTitle: "Domain Registered,"
     );
   }
 }
