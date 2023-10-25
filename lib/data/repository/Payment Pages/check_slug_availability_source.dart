@@ -10,21 +10,21 @@ import 'package:kita_kerja/providers/network_provider.dart';
 import 'package:kita_kerja/providers/source_provider.dart';
 
 class CheckSlugAvailabilityRepoImpl implements CheckSlugAvailabilityRepo {
-  final NetworkInfo checkSlug;
-  final CheckSlugAvailabilitySource availability;
+  final NetworkInfo check;
+  final CheckSlugAvailabilitySource slug;
 
   CheckSlugAvailabilityRepoImpl({required Ref ref})
-      : availability = ref.read(checkSlugSourceProvider as ProviderListenable<CheckSlugAvailabilitySource>),
-        checkSlug = ref.read(networkInfoProvider);
+      : slug = ref.read(checkSlugSourceProvider as ProviderListenable<CheckSlugAvailabilitySource>),
+        check = ref.read(networkInfoProvider);
 
   @override
   Future<Either<Failure, CheckSlugAvailabilityResponse>>
       checkSlugAvailability()async{
     ServiceRunner<Failure, CheckSlugAvailabilityResponse> sR =
-        ServiceRunner(checkSlug);
+        ServiceRunner(check);
 
     return sR.tryRemoteandCatch(
-        call: availability.checkSlugAvailability(),
+        call: slug.checkSlugAvailability(),
         errorTitle: "Slug Unavailable");
   }  
 }
