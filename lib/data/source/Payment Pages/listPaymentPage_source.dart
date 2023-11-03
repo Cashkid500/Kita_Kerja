@@ -45,7 +45,7 @@ class ListPaymentPageSourceImpl implements ListPaymentPageSource {
           throw Exception(data['message']);
         } else {
           final errorMessage = data['message'];
-          throw Exception("API failed");
+          throw Exception(errorMessage);
         }
       } on Exception catch (_) {
         rethrow;

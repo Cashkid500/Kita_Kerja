@@ -54,7 +54,7 @@ class CreatePaymentPageSourceImpl implements CreatePaymentPageSource {
           throw Exception(data['message']);
         } else {
           final errorMessage = data['message'];
-          throw Exception("API failed");
+          throw Exception(errorMessage);
         }
       } on Exception catch (_) {
         rethrow;

@@ -46,7 +46,7 @@ class CheckSlugAvailabilitySourceImpl implements CheckSlugAvailabilitySource {
           throw Exception(data['message']);
         } else {
           final errorMessage = data['message'];
-          throw Exception("API failed");
+          throw Exception(errorMessage);
         }
       } on Exception catch (_) {
         rethrow;

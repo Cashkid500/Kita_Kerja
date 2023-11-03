@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:kita_kerja/constants/app_api_endpoints.dart';
 import 'package:kita_kerja/core/network/network_request.dart';
 import 'package:kita_kerja/core/network/network_retry.dart';
@@ -52,7 +51,7 @@ class UpdatePlanSourceImpl implements UpdatePlanSource {
           throw Exception(data['message']);
         } else {
           final errorMessage = data['message'];
-          throw Exception("API failed");
+          throw Exception(errorMessage);
         }
       } on Exception catch (_) {
         rethrow;
