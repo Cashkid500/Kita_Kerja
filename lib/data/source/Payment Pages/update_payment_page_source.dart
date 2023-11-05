@@ -22,7 +22,7 @@ class UpdatePaymentPageSourceImpl implements UpdatePaymentPageSource {
   // }
 @override
   Future<UpdatePaymentPageResponse> updatePaymentPage(
-      {required UpdatePaymentPages payload}) async {
+      {required UpdatePaymentPage payload}) async {
     String url = AppEndpoints.updatePaymentPage;
     final body = {
       "name": payload.name,

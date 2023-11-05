@@ -3,6 +3,6 @@ import 'package:kita_kerja/models/Payment%20Pages/response/update_payment_page_r
 
 abstract class UpdatePaymentPageSource {
   Future<UpdatePaymentPageResponse> updatePaymentPage({
-    required UpdatePaymentPages payload,
+    required UpdatePaymentPage payload,
   });
 }

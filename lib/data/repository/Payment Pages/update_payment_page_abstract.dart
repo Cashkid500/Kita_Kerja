@@ -5,6 +5,6 @@ import 'package:kita_kerja/models/Payment%20Pages/response/update_payment_page_r
 
 abstract class UpdatePaymentPageRepo {
   Future<Either<Failure, UpdatePaymentPageResponse>> updatePaymentPage ({
-    required UpdatePaymentPages payload,
+    required UpdatePaymentPage payload,
   });
 }

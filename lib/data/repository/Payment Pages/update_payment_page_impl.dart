@@ -20,7 +20,7 @@ class UpdatePaymentPageRepoImpl implements UpdatePaymentPageRepo{
 
   @override
   Future<Either<Failure, UpdatePaymentPageResponse>> updatePaymentPage ({
-    required UpdatePaymentPages payload,
+    required UpdatePaymentPage payload,
   })async{
     ServiceRunner<Failure, UpdatePaymentPageResponse> sR = ServiceRunner(update);
 
