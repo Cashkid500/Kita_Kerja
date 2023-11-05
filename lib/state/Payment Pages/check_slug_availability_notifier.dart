@@ -3,11 +3,13 @@ import 'package:kita_kerja/data/repository/Payment%20Pages/check_slug_availabili
 import 'package:kita_kerja/providers/repo_provider.dart';
 import 'package:kita_kerja/state/Payment%20Pages/check_slug_availability_state.dart';
 
-class CheckSlugAvailabilityStateNotifier extends StateNotifier< CheckSlugAvailabilityState> {
+class CheckSlugAvailabilityStateNotifier
+    extends StateNotifier<CheckSlugAvailabilityState> {
   final CheckSlugAvailabilityRepo _checkSlugAvailaibilityRepository;
 
   CheckSlugAvailabilityStateNotifier(Ref ref)
-      : _checkSlugAvailaibilityRepository = ref.read(checkSlugAvailabilityRepositoryProvider),
+      : _checkSlugAvailaibilityRepository =
+            ref.read(checkSlugAvailabilityRepositoryProvider),
         super(CheckSlugAvailabilityInitial());
 
   Future<void> checkSlugAvailability() async {
@@ -17,15 +19,12 @@ class CheckSlugAvailabilityStateNotifier extends StateNotifier< CheckSlugAvailab
         await _checkSlugAvailaibilityRepository.checkSlugAvailability();
 
     state = userTransactionListOrError.fold(
-      (l) => CheckSlugAvailabilityFailure(failure:l,),
-      (r) => CheckSlugAvailabilitySuccess(responseData:r),
+      (l) => CheckSlugAvailabilityFailure(failure: l,),
+      (r) => CheckSlugAvailabilitySuccess(responseData: r,),
     );
 
     if (state is CheckSlugAvailabilityFailure) {
       final failureState = state as CheckSlugAvailabilityFailure;
-
-    } else if (state is CheckSlugAvailabilitySuccess) {
-
-    }
+    } else if (state is CheckSlugAvailabilitySuccess) {}
   }
 }
