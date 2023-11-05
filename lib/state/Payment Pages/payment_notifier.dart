@@ -107,7 +107,7 @@ class UpdatePaymentPageStateNotifier
         super(UpdatePaymentPageInitial());
 
   Future<void> updatePaymentPage({
-    required UpdatePaymentPages payload,
+    required UpdatePaymentPage payload,
   }) async {
     state = UpdatePaymentPageLoading();
 
