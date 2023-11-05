@@ -1,5 +1,5 @@
 import 'package:kita_kerja/core/failures/failures.dart';
-import 'package:kita_kerja/models/Apple%20Pay/response/unregisterDomainResponse.dart';
+import 'package:kita_kerja/models/Apple%20Pay/response/unregister_domain_response.dart';
 
 class UnregisterDomainState {}
 

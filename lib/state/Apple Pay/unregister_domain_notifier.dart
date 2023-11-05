@@ -1,7 +1,6 @@
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kita_kerja/data/repository/Apple%20Pay/unregister_domain_abstract.dart';
-import 'package:kita_kerja/models/Apple%20Pay/body/unregisterDomain.dart';
+import 'package:kita_kerja/models/Apple%20Pay/body/unregister_domain.dart';
 import 'package:kita_kerja/providers/repo_provider.dart';
 import 'package:kita_kerja/state/Apple%20Pay/unregister_domain_state.dart';
 
