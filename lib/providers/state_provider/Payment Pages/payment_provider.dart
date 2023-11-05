@@ -9,7 +9,7 @@ final createPaymentPageStateNotifierProvider =
 );
 
 // List Payment Pages
-final listPaymentPageStateNotifierProvider = StateNotifierProvider<
+final listPaymentPagesStateNotifierProvider = StateNotifierProvider<
     ListPaymentPagesStateNotifier, ListPaymentPagesState>(
   (ref) => ListPaymentPagesStateNotifier(ref),
 );
