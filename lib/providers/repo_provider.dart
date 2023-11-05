@@ -31,6 +31,8 @@ import 'package:kita_kerja/data/repository/Terminal/list_terminals_abstract.dart
 import 'package:kita_kerja/data/repository/Terminal/list_terminals_impl.dart';
 import 'package:kita_kerja/data/repository/Transaction%20Split/list_splits_abstract.dart';
 import 'package:kita_kerja/data/repository/Transaction%20Split/list_splits_impl.dart';
+import 'package:kita_kerja/data/repository/Transfers/list_transfers_abstract.dart';
+import 'package:kita_kerja/data/repository/Transfers/list_transfers_impl.dart';
 
 /////////////////////////////////////////////////////////////////////////////
 // Apple Pay
@@ -134,4 +136,13 @@ final listTerminalsRepositoryProvider = Provider<ListTerminalsRepo>(
 // List Splits
 final listSplitsRepositoryProvider = Provider<ListSplitsRepo>(
   (ref) => ListSplitsRepoImpl(ref: ref),
+);
+
+/////////////////////////////////////////////////////////////////////////////
+// Transfers
+/////////////////////////////////////////////////////////////////////////////
+
+// List Transfers
+final listTransfersRepositoryProvider = Provider<ListTransfersRepo>(
+  (ref) => ListTransfersRepoImpl(ref: ref),
 );
