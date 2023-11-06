@@ -4,7 +4,7 @@ import 'package:kita_kerja/core/failures/failures.dart';
 import 'package:kita_kerja/core/network/network_info.dart';
 import 'package:kita_kerja/core/runner/service.dart';
 import 'package:kita_kerja/data/repository/Apple%20Pay/unregister_domain_abstract.dart';
-import 'package:kita_kerja/data/source/Apple%20Pay/unregisterDomain_abstract.dart';
+import 'package:kita_kerja/data/source/Apple%20Pay/unregister_domain_abstract.dart';
 import 'package:kita_kerja/models/Apple%20Pay/body/unregister_domain.dart';
 import 'package:kita_kerja/models/Apple%20Pay/response/unregister_domain_response.dart';
 import 'package:kita_kerja/providers/network_provider.dart';

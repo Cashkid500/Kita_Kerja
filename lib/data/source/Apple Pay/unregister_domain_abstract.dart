@@ -5,5 +5,4 @@ abstract class UnregisterDomainSource {
   Future<UnregisterDomainResponse> unregisterDomain({
     required UnregisterDomain payload,
   });
-  
 }

@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kita_kerja/data/source/Apple%20Pay/unregisterDomain_abstract.dart';
+import 'package:kita_kerja/data/source/Apple%20Pay/unregister_domain_abstract.dart';
 import 'package:kita_kerja/data/source/Apple%20Pay/unregister_domain_source.dart';
-import 'package:kita_kerja/data/source/Payment%20Pages/CheckSlugAvailability_abstract.dart';
+import 'package:kita_kerja/data/source/Payment%20Pages/check_slug_availability_abstract.dart';
 import 'package:kita_kerja/data/source/Payment%20Pages/check_slug_availability_source.dart';
 import 'package:kita_kerja/data/source/Payment%20Pages/create_payment_page_abstract.dart';
 import 'package:kita_kerja/data/source/Payment%20Pages/create_payment_page_source.dart';

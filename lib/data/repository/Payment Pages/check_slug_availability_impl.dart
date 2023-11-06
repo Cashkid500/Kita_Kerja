@@ -4,7 +4,7 @@ import 'package:kita_kerja/core/failures/failures.dart';
 import 'package:kita_kerja/core/network/network_info.dart';
 import 'package:kita_kerja/core/runner/service.dart';
 import 'package:kita_kerja/data/repository/Payment%20Pages/check_slug_availability_abstract.dart';
-import 'package:kita_kerja/data/source/Payment%20Pages/CheckSlugAvailability_abstract.dart';
+import 'package:kita_kerja/data/source/Payment%20Pages/check_slug_availability_abstract.dart';
 import 'package:kita_kerja/models/Payment%20Pages/response/check_slug_availability_response.dart';
 import 'package:kita_kerja/providers/network_provider.dart';
 import 'package:kita_kerja/providers/source_provider.dart';
