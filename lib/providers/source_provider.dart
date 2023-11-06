@@ -41,20 +41,29 @@ import 'package:kita_kerja/data/source/Transactions/list_transaction_abstract.da
 import 'package:kita_kerja/data/source/Transactions/list_transaction_source.dart';
 import 'package:kita_kerja/data/source/Transactions/transactions_total_abstract.dart';
 import 'package:kita_kerja/data/source/Transactions/transactions_total_source.dart';
-import 'package:kita_kerja/data/source/Transactions/verify_transactionTimeline_source.dart';
+import 'package:kita_kerja/data/source/Transactions/verify_transaction_source.dart';
 import 'package:kita_kerja/data/source/Transactions/verify_transaction_abstract.dart';
-import 'package:kita_kerja/data/source/Transactions/view_transactionTimeline_abstract.dart';
-import 'package:kita_kerja/data/source/Transactions/viewTransactionTimeline_source.dart';
+import 'package:kita_kerja/data/source/Transactions/view_transaction_timeline_abstract.dart';
+import 'package:kita_kerja/data/source/Transactions/view_transaction_timeline_source.dart';
 import 'package:kita_kerja/data/source/Transfers/list_transfers_abstract.dart';
 import 'package:kita_kerja/data/source/Transfers/list_transfers_source.dart';
 import 'package:kita_kerja/providers/network_provider.dart';
 
+/////////////////////////////////////////////////////////////////////////////
+// Apple Pay
+/////////////////////////////////////////////////////////////////////////////
+
+// Unregister Domain
 final unregisterSourceProvider = Provider<UnregisterDomainSource>(
   (ref) => UnregisterDomainSourceImpl(
     networkRequest: ref.read(networkRequestProvider),
     networkRetry: ref.read(networkRetryProvider),
   ),
 );
+
+/////////////////////////////////////////////////////////////////////////////
+// Payment Pages
+/////////////////////////////////////////////////////////////////////////////
 
 // CheckSlugAvailability
 final checkSlugSourceProvider = Provider<CheckSlugAvailabilitySource>(
@@ -96,6 +105,10 @@ final updatePaymentSourceProvider = Provider<UpdatePaymentPageSource>(
   ),
 );
 
+/////////////////////////////////////////////////////////////////////////////
+// Plans
+/////////////////////////////////////////////////////////////////////////////
+
 // Create Plan
 final createPlanSourceProvider = Provider<CreatePlanSource>(
   (ref) => CreatePlanSourceImpl(
@@ -127,6 +140,10 @@ final updatePlanSourceProvider = Provider<UpdatePlanSource>(
     networkRetry: ref.read(networkRetryProvider),
   ),
 );
+
+/////////////////////////////////////////////////////////////////////////////
+// Products
+/////////////////////////////////////////////////////////////////////////////
 
 // Create Product
 final createProductSourceProvider = Provider<CreateProductSource>(
@@ -160,6 +177,10 @@ final updateProductSourceProvider = Provider<UpdateProductSource>(
   ),
 );
 
+/////////////////////////////////////////////////////////////////////////////
+// Terminal
+/////////////////////////////////////////////////////////////////////////////
+
 // List Terminals
 final listTerminalsSourceProvider = Provider<ListTerminalsSource>(
   (ref) => ListTerminalsSourceImpl(
@@ -167,6 +188,10 @@ final listTerminalsSourceProvider = Provider<ListTerminalsSource>(
     networkRetry: ref.read(networkRetryProvider),
   ),
 );
+
+/////////////////////////////////////////////////////////////////////////////
+// Transaction Split
+/////////////////////////////////////////////////////////////////////////////
 
 // List Splits
 final listSplitsSourceProvider = Provider<ListSplitsSource>(
@@ -176,6 +201,10 @@ final listSplitsSourceProvider = Provider<ListSplitsSource>(
   ),
 );
 
+/////////////////////////////////////////////////////////////////////////////
+// Transfers
+/////////////////////////////////////////////////////////////////////////////
+
 // List Transfers
 final listTransfersSourceProvider = Provider<ListTransfersSource>(
   (ref) => ListTransfersSourceImpl(
@@ -183,6 +212,10 @@ final listTransfersSourceProvider = Provider<ListTransfersSource>(
     networkRetry: ref.read(networkRetryProvider),
   ),
 );
+
+/////////////////////////////////////////////////////////////////////////////
+// Transactions
+/////////////////////////////////////////////////////////////////////////////
 
 // Export Transaction
 final exportTransactionSourceProvider = Provider<ExportTransactionSource>(

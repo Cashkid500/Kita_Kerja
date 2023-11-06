@@ -31,6 +31,20 @@ import 'package:kita_kerja/data/repository/Terminal/list_terminals_abstract.dart
 import 'package:kita_kerja/data/repository/Terminal/list_terminals_impl.dart';
 import 'package:kita_kerja/data/repository/Transaction%20Split/list_splits_abstract.dart';
 import 'package:kita_kerja/data/repository/Transaction%20Split/list_splits_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/export_transaction_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/export_transaction_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/fetch_transaction_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/fetch_transaction_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/initialize_transaction_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/initialize_transaction_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/list_transaction_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/list_transaction_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/transactions_total_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/transactions_total_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/verify_transaction_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/verify_transaction_impl.dart';
+import 'package:kita_kerja/data/repository/Transactions/view_transaction_timeline_abstract.dart';
+import 'package:kita_kerja/data/repository/Transactions/view_transaction_timeline_impl.dart';
 import 'package:kita_kerja/data/repository/Transfers/list_transfers_abstract.dart';
 import 'package:kita_kerja/data/repository/Transfers/list_transfers_impl.dart';
 
@@ -145,4 +159,43 @@ final listSplitsRepositoryProvider = Provider<ListSplitsRepo>(
 // List Transfers
 final listTransfersRepositoryProvider = Provider<ListTransfersRepo>(
   (ref) => ListTransfersRepoImpl(ref: ref),
+);
+
+/////////////////////////////////////////////////////////////////////////////
+// Transactions
+/////////////////////////////////////////////////////////////////////////////
+
+// Export Transaction
+final exportTransactionRepositoryProvider = Provider<ExportTransactionRepo>(
+  (ref) => ExportTransactionRepoImpl(ref: ref),
+);
+
+// Fetch Transaction
+final fetchTransactionRepositoryProvider = Provider<FetchTransactionRepo>(
+  (ref) => FetchTransactionRepoImpl(ref: ref),
+);
+
+// Initialize Transaction
+final initializeTransactionRepositoryProvider = Provider<InitializeTransactionRepo>(
+  (ref) => InitializeTransactionRepoImpl(ref: ref),
+);
+
+// List Transaction
+final listTransactionRepositoryProvider = Provider<ListTransactionRepo>(
+  (ref) => ListTransactionRepoImpl(ref: ref),
+);
+
+// Transactions Total
+final transactionsTotalRepositoryProvider = Provider<TransactionsTotalRepo>(
+  (ref) => TransactionsTotalRepoImpl(ref: ref),
+);
+
+// Verify Transaction
+final verifyTransactionRepositoryProvider = Provider<VerifyTransactionRepo>(
+  (ref) => VerifyTransactionRepoImpl(ref: ref),
+);
+
+// View Transaction Timeline
+final viewTransactionTimelineRepositoryProvider = Provider<ViewTransactionTimelineRepo>(
+  (ref) => ViewTransactionTimelineRepoImpl(ref: ref),
 );
