@@ -4,7 +4,7 @@ import 'package:kita_kerja/core/failures/failures.dart';
 import 'package:kita_kerja/core/network/network_info.dart';
 import 'package:kita_kerja/core/runner/service.dart';
 import 'package:kita_kerja/data/repository/Transactions/view_transaction_timeline_abstract.dart';
-import 'package:kita_kerja/data/source/Transactions/view_transactionTimeline_abstract.dart';
+import 'package:kita_kerja/data/source/Transactions/view_transaction_timeline_abstract.dart';
 import 'package:kita_kerja/models/Transactions/response/view_transaction_timeline_response.dart';
 import 'package:kita_kerja/providers/network_provider.dart';
 import 'package:kita_kerja/providers/source_provider.dart';
