@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../about/about.dart';
+import 'package:kita_kerja/screens/about/about.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -13,18 +12,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    // Add your home screen content here
     HomeScreen(),
-    // Add your profile screen content here
     ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffD1D8EB),
+      backgroundColor: const Color(0xffD1D8EB),
       body: SingleChildScrollView(
-        // Wrap with SingleChildScrollView
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -33,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               child: InkWell(
                 onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => AboutScreen()));
+                    builder: (BuildContext context) => const AboutScreen()));
               },
                 child: Container(
                   height: 131,
@@ -41,7 +37,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: 0.5),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(0),
-                    color: Color(0xffffffff),
+                    color: const Color(0xffffffff),
                   ),
                   
                   child: Column(
@@ -50,23 +46,23 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(10),
+                          contentPadding: const EdgeInsets.all(10),
                           isCollapsed: true,
                           labelText: 'Flutter Developer.',
                           filled: true,
-                          fillColor: Color(0xffD1D8EB),
+                          fillColor: const Color(0xffD1D8EB),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(7),
-                            borderSide: BorderSide(color: Colors.white),
+                            borderSide: const BorderSide(color: Colors.white),
                           ),
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             IconData(0xe567, fontFamily: 'MaterialIcons'),
                           ),
                         ),
                       ),
 
-                      SizedBox(height: 15), // Adding some spacing
-                      Row(
+                      const SizedBox(height: 15), 
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
@@ -86,7 +82,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
 
             // Pertamina Junior Developer
-            SizedBox(height: 20), // Adding space of 20 pixels between the containers
+            const SizedBox(height: 20), 
             
             Container(
               height: 198,
@@ -101,7 +97,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/Pertamina.png'),
-                      Text(
+                      const Text(
                         'Junior Flutter Developer',
                         style: TextStyle(
                           fontSize: 13,
@@ -110,9 +106,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       
-                      Text(
+                      const Text(
                         'PT. Pertamina',
                         style: TextStyle(
                           fontSize: 14,
@@ -121,7 +117,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Jakarta Raya, DKI Jakarta',
                         style: TextStyle(
                           fontSize: 14,
@@ -130,7 +126,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Perkiraan Gaji Rp. 10.000.000',
                         style: TextStyle(
                           fontSize: 14,
@@ -139,8 +135,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 25),
-                      Text(
+                      const SizedBox(height: 25),
+                      const Text(
                         '1 jam yang lalu',
                         style: TextStyle(
                           fontSize: 14,
@@ -150,8 +146,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
 
-                  SizedBox(width: 16),
-                  Center(
+                  const SizedBox(width: 16),
+                  const Center(
                     child: Icon(
                       Icons.turned_in_not,
                       color: Color(0xff4d7efa),
@@ -163,7 +159,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
 
             // Pertamina Senior Flutter Developer
-            SizedBox(height: 20), // Adding space of 20 pixels between the containers
+            const SizedBox(height: 20), 
             
             Container(
               height: 198,
@@ -178,7 +174,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/Pertamina.png'),
-                      Text(
+                      const Text(
                         'Senior Flutter Developer',
                         style: TextStyle(
                           fontSize: 13,
@@ -187,9 +183,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
 
-                      Text(
+                      const Text(
                         'PT. Pertamina',
                         style: TextStyle(
                           fontSize: 14,
@@ -198,7 +194,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Jakarta Raya, DKI Jakarta',
                         style: TextStyle(
                           fontSize: 14,
@@ -207,7 +203,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Perkiraan Gaji Rp. 20.000.000',
                         style: TextStyle(
                           fontSize: 14,
@@ -216,9 +212,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
 
-                      Text(
+                      const Text(
                         '3 jam yang lalu',
                         style: TextStyle(
                           fontSize: 14,
@@ -228,9 +224,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
 
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
 
-                  Center(
+                  const Center(
                     child: Icon(
                       Icons.turned_in_not,
                       color: Color(0xff4d7efa),
@@ -242,7 +238,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
 
             // Telkom Indonesia
-            SizedBox(height: 20), // Adding space of 20 pixels between the containers
+            const SizedBox(height: 20), 
             
             Container(
               height: 198,
@@ -257,7 +253,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/Telkom.png'),
-                      Text(
+                      const Text(
                         'Flutter Developer',
                         style: TextStyle(
                           fontSize: 13,
@@ -266,9 +262,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
 
-                      Text(
+                      const Text(
                         'PT. Telkom Indonesia',
                         style: TextStyle(
                           fontSize: 14,
@@ -277,7 +273,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Jakarta Selatan, DKI Jakarta',
                         style: TextStyle(
                           fontSize: 14,
@@ -286,7 +282,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Perkiraan Gaji Dibawah Perkiraan Anda',
                         style: TextStyle(
                           fontSize: 14,
@@ -295,9 +291,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
 
-                      Text(
+                      const Text(
                         '5 jam yang lalu',
                         style: TextStyle(
                           fontSize: 14,
@@ -307,9 +303,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
 
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
 
-                  Center(
+                  const Center(
                     child: Icon(
                       Icons.turned_in_not,
                       color: Color(0xff4d7efa),
@@ -321,7 +317,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
 
             // Starbucks
-            SizedBox(height: 20), // Adding space of 20 pixels between the containers
+            const SizedBox(height: 20), 
 
             Container(
               height: 198,
@@ -336,7 +332,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/Starbucks.png'),
-                      Text(
+                      const Text(
                         'Flutter Developer',
                         style: TextStyle(
                           fontSize: 13,
@@ -345,9 +341,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
 
-                      Text(
+                      const Text(
                         'PT. Starbuck Indonesia',
                         style: TextStyle(
                           fontSize: 14,
@@ -356,7 +352,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Jakarta Selatan, DKI Jakarta',
                         style: TextStyle(
                           fontSize: 14,
@@ -365,7 +361,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                       ),
 
-                      Text(
+                      const Text(
                         'Perkiraan Gaji Rp. 8.000.000',
                         style: TextStyle(
                           fontSize: 14,
@@ -376,9 +372,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
 
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
 
-                  Center(
+                  const Center(
                     child: Icon(
                       Icons.turned_in_not,
                       color: Color(0xff4d7efa),
@@ -399,7 +395,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             _selectedIndex = index;
           });
         },
-        items: [
+        items: const [ 
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
@@ -420,11 +416,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 }
 
-// Create separate HomeScreen and ProfileScreen classes for the content of the respective tabs.
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Home Screen'),
     );
   }
@@ -433,7 +428,7 @@ class HomeScreen extends StatelessWidget {
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Profile Screen'),
     );
   }

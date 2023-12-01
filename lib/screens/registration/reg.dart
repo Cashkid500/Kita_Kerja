@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../dashboard/dashboard.dart';
+import 'package:kita_kerja/screens/dashboard/dashboard.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -18,16 +17,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           Image.asset("assets/images/Reg.png"),
 
-          SizedBox(height: 20), // Add some space between the image and the text
+          const SizedBox(height: 20), 
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Text(
               'Registration',
               style: GoogleFonts.montserrat(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 36,
                   color: Colors.black,
@@ -37,13 +36,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
 
           // Email Text
-          SizedBox(height: 37),
+          const SizedBox(height: 37),
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Text(
               'Email',
               style: GoogleFonts.montserrat(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -53,20 +52,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
 
           // Email TextFormField
-          SizedBox(height:10), // Add some space between the "Email" text and the TextFormField
+          const SizedBox(height:10), 
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Container(
               width: 297,
               height: 55,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    width: 2, color: Color(0xff0948EA)), // Add border
+                    width: 2, color: const Color(0xff0948EA)),
               ),
               child: TextFormField(
                 controller: emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Email...',
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(horizontal: 15),
@@ -80,13 +79,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
 
           // Password Text
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Text(
               'Password',
               style: GoogleFonts.montserrat(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -96,21 +95,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
 
           // Password TextFormField
-          SizedBox(height:10), // Add some space between the "Email" text and the TextFormField
+          const SizedBox(height:10), 
           
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Container(
               width: 297,
               height: 55,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    width: 2, color: Color(0xff0948EA)), // Add border
+                    width: 2, color: const Color(0xff0948EA)),
               ),
               child: TextFormField(
                 controller: emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Password...',
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(horizontal: 15),
@@ -124,13 +123,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
 
           //Re-enter Password Text
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Text(
               'Re-enter Password',
               style: GoogleFonts.montserrat(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -140,21 +139,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
           
           // Re-enter Password TextFormField
-          SizedBox(height:10), // Add some space between the "Email" text and the TextFormField
+          const SizedBox(height:10), 
           
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: Container(
               width: 297,
               height: 55,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    width: 2, color: Color(0xff0948EA)), // Add border
+                    width: 2, color: const Color(0xff0948EA)),
               ),
               child: TextFormField(
                 controller: emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Re-enter Password...',
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(horizontal: 15),
@@ -168,13 +167,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
           
           // Submit Button
-          SizedBox(height: 50.0),
+           const SizedBox(height: 50.0),
           Padding(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             child: InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => DashboardScreen()));
+                    builder: (BuildContext context) => const DashboardScreen()));
               },
               child: Container(
                 width: 297,
@@ -184,7 +183,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
+                child: const Text(
                   "Submit",
                   style: TextStyle(
                     color: Colors.white,

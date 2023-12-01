@@ -21,7 +21,7 @@ class _AboutScreenState extends State<AboutScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Profil Saya',
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
@@ -36,7 +36,7 @@ class _AboutScreenState extends State<AboutScreen> {
               _selectedIndex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home_outlined,
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: 10.0,), 
+          const SizedBox(height: 10.0,), 
 
           Container(
             height: 150,
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SizedBox(child: Image.asset('assets/images/Ellipse.png'),),
                     
-                    Text(
+                    const Text(
                       'John Doe',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
 
-                    Text(
+                    const Text(
                       'Flutter Developer',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
 
-                    Text(
+                    const Text(
                       'johndoe@gmail.com | 0815124251828',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 10.0),
@@ -112,13 +112,13 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 Container(
-                  child: Icon(Icons.edit,color: Colors.blue,),
+                  child: const Icon(Icons.edit,color: Colors.blue,),
                 ),
               ],
             ),
           ),
 
-          SizedBox(height: 10.0,), // SizedBox
+          const SizedBox(height: 10.0,), // SizedBox
           
           // Pengalaman
           Container(
@@ -128,7 +128,7 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -138,9 +138,9 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset("assets/images/Bag.png"),
-                    SizedBox(width: 10.0,),
+                    const SizedBox(width: 10.0,),
                     
-                    Text(
+                    const Text(
                       'Pengalaman Kerja',
                       style: TextStyle(
                           color: Color(0xff4D7EFA),
@@ -148,9 +148,9 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 20),
                     ),
 
-                    SizedBox(width: 100.0,),
+                    const SizedBox(width: 100.0,),
                     
-                    Text(
+                    const Text(
                       '+',
                       style: TextStyle(
                           color: Color(0xff4D7EFA),
@@ -160,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
+                const SizedBox(
                   width: 315,
                   child: Divider(
                     height: 4,
@@ -169,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -263,15 +263,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                // SizedBox(
-                //   height: 66.0,
-                // ),
               ],
             ),
           ),
 
           // Pendidikan
-          SizedBox(height: 10.0,),
+          const SizedBox(height: 10.0,),
           
           Container(
             height: 130,
@@ -280,7 +277,7 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(14),
-              color: Color(0xffffffff),
+              color: const Color(0xffffffff),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -289,10 +286,10 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Image.asset("assets/images/Education.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
-                    Text(
+                    const Text(
                       'Pendidikan',
                       style: TextStyle(
                           color: Color(0xff4D7EFA),
@@ -300,9 +297,9 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 20),
                     ),
 
-                    SizedBox(width: 165.0,),
+                    const SizedBox(width: 165.0,),
                     
-                    Text(
+                    const Text(
                       '+',
                       style: TextStyle(
                           color: Color(0xff4D7EFA),
@@ -312,7 +309,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
+                const SizedBox(
                   width: 315,
                   child: Divider(
                     height: 4,
@@ -321,7 +318,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -355,9 +352,6 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    // SizedBox(
-                    //   height: 15,
-                    // ),
                   ],
                 ),
               ],
@@ -365,7 +359,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
           // Kemampuan
-          SizedBox(
+          const SizedBox(
             height: 1.0,
           ),
           Padding(
@@ -386,9 +380,9 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset("assets/images/Brain.png"),
-                      SizedBox(width: 10.0,),
+                      const SizedBox(width: 10.0,),
                       
-                      Text(
+                      const Text(
                         'Kemampuan',
                         style: TextStyle(
                             color: Color(0xff4D7EFA),
@@ -396,9 +390,9 @@ class HomeScreen extends StatelessWidget {
                             fontSize: 20),
                       ),
 
-                      SizedBox(width: 155.0,),
+                      const SizedBox(width: 155.0,),
                       
-                      Text(
+                      const Text(
                         '+',
                         style: TextStyle(
                             color: Color(0xff4D7EFA),
@@ -408,7 +402,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   
-                  SizedBox(
+                  const SizedBox(
                     width: 315,
                     child: Divider(
                       height: 4,
@@ -417,7 +411,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
 
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -470,7 +464,7 @@ class HomeScreen extends StatelessWidget {
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Profile Screen'),
     );
   }
