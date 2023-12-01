@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kita_kerja/screens/login/login.dart';
+import 'package:kita_kerja/screens/registration/reg.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-                LoginScreen()), // Replace NextScreen with the screen you want to navigate to
+                RegistrationScreen()), // Replace NextScreen with the screen you want to navigate to
       );
     });
   }
